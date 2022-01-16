@@ -1,1 +1,67 @@
-{}
+{
+    "label": "Pico y placa Medellín",
+    "timeZone": "America/Bogota",
+    "updated": "2022-01-16T12:00:00-05:00",
+    "rules": [
+        {
+            "since": "2022-01-17T00:00:00-05:00",
+            "until": "2022-06-30T23:59:59-05:00",
+            "hollidays": false,
+            "label": "Lunes 6-9",
+            "dayOfWeek": "Monday",
+            "startsAt": "05:00:00",
+            "endsAt": "20:00:00",
+            "plateRegex": "(^[A-Z]{3}[0-9]{2}[6-9]$)|(^[A-Z]{3}[6-9][0-9][A-Z]?$)",
+            "serviceKind": "Particular",
+            "fuelType": "GASOLINA"
+        },
+        {
+            "since": "2022-01-17T00:00:00-05:00",
+            "until": "2022-06-30T23:59:59-05:00",
+            "hollidays": false,
+            "label": "Martes 2-3",
+            "dayOfWeek": "Tuesday",
+            "startsAt": "05:00:00",
+            "endsAt": "20:00:00",
+            "plateRegex": "(^[A-Z]{3}[0-9]{2}[2-3]$)|(^[A-Z]{3}[2-3][0-9][A-Z]?$)",
+            "serviceKind": "Particular",
+            "fuelType": "GASOLINA"
+        },
+        {
+            "since": "2022-01-17T00:00:00-05:00",
+            "until": "2022-06-30T23:59:59-05:00",
+            "hollidays": false,
+            "label": "Miércoles 4-8",
+            "dayOfWeek": "Tuesday",
+            "startsAt": "05:00:00",
+            "endsAt": "20:00:00",
+            "plateRegex": "(^[A-Z]{3}[0-9]{2}[4-8]$)|(^[A-Z]{3}[4-8][0-9][A-Z]?$)",
+            "serviceKind": "Particular",
+            "fuelType": "GASOLINA"
+        },
+        {
+            "since": "2022-01-17T00:00:00-05:00",
+            "until": "2022-06-30T23:59:59-05:00",
+            "hollidays": false,
+            "label": "Jueves 0-7",
+            "dayOfWeek": "Tuesday",
+            "startsAt": "05:00:00",
+            "endsAt": "20:00:00",
+            "plateRegex": "(^[A-Z]{3}[0-9]{2}[0-7]$)|(^[A-Z]{3}[0-7][0-9][A-Z]?$)",
+            "serviceKind": "Particular",
+            "fuelType": "GASOLINA"
+        },
+        {
+            "since": "2022-01-17T00:00:00-05:00",
+            "until": "2022-06-30T23:59:59-05:00",
+            "hollidays": false,
+            "label": "Viernes 5-1",
+            "dayOfWeek": "Tuesday",
+            "startsAt": "05:00:00",
+            "endsAt": "20:00:00",
+            "plateRegex": "(^[A-Z]{3}[0-9]{2}[5-90-1]$)|(^[A-Z]{3}[5-90-1][0-9][A-Z]?$)",
+            "serviceKind": "Particular",
+            "fuelType": "GASOLINA"
+        }
+    ]
+}
