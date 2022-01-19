@@ -38,7 +38,7 @@ components:
   schemas:
     tz:
       type: string
-      description: Time zone for restrictions from tz database
+      description: Time zone for restrictions from 'tz database'
       example: "America/Bogota"
     datetime:
       type: string
@@ -46,11 +46,11 @@ components:
       example: "2022-01-16T12:00:00-05:00"
     time:
       type: string
-      description: Time in 24h with hours, minutes, seconds
+      description: Time using a 24-hour clock, minutes and seconds
       example: "18:00:00"
     dayofweek:
       type: string
-      description: Day of the week capitalized english
+      description: Day of the week in English
       enum:
         - Sunday
         - Monday
@@ -82,7 +82,7 @@ components:
           $ref: "#/components/schemas/datetime"
           nullable: false
         hollidays:
-          description: If this rule is applies on hollidays
+          description: If this rule applies on holidays
           type: boolean
           nullable: false
         label:
@@ -94,27 +94,27 @@ components:
           type: string
           nullable: false
         dayOfWeek:
-          description: Days in which this rule is applies
+          description: Days on which this rule applies
           $ref: "#/components/schemas/dayofweek"
           nullable: true
         startsAt:
-          description: Time of the day in which this rule start to apply
+          description: Time of day when this rule starts to apply
           $ref: "#/components/schemas/time"
           nullable: true
         endsAt:
-          description: Time of the day in which this rule ends to apply
+          description: Time of day when this rule ends to apply
           $ref: "#/components/schemas/time"
           nullable: true
         plateRegex:
-          description: Licence plates for which this rule is applies
+          description: Licence plates for which this rule applies
           $ref: "#/components/schemas/regex"
           nullable: true
         serviceKind:
-          description: Vehicle service kind for which this rule is applies
+          description: Vehicle service kind for which this rule applies
           type: string
           nullable: true
         fuelType:
-          description: Vehicle fuel type for which this rule is applies
+          description: Vehicle fuel type for which this rule applies
           type: string
           nullable: true
     restrictions:
