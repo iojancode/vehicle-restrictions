@@ -4,6 +4,8 @@ Theres no suitable vehicle restrictions API that works for me, which is called "
 
 Feel free to use the raw service `https://raw.githubusercontent.com/iojancode/vehicle-restrictions/master/co-ant-medellin.json` from your app
 
-Feel free to contribute with a PR
+You can create proxies with `openapi.yaml` spec
+
+If your want to contribute please create a PR
 
 Regards,
