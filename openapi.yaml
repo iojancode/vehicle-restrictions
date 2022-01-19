@@ -1,0 +1,141 @@
+openapi: 3.0.3
+info:
+  title: vehicle-restrictions
+  version: "0.1"
+paths:
+  /{city_code}.json:
+    get:
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/restrictions"
+        "404":
+          description: Not found
+          content:
+            text/plain:
+              schema:
+                type: string
+    parameters:
+      - in: path
+        required: true
+        schema:
+          type: string
+          pattern: '[a-z]{2}\-[a-z]{3}\-[a-z]{3,}'
+        name: city_code
+        example: "co-ant-medellin"
+servers:
+  - url: https://raw.githubusercontent.com/iojancode/vehicle-restrictions/{branch}
+    variables:
+      branch:
+        default: master
+        enum:
+          - master
+          - test
+components:
+  schemas:
+    tz:
+      type: string
+      description: Time zone for restrictions from tz database
+      example: "America/Bogota"
+    datetime:
+      type: string
+      description: Date and time with time zone
+      example: "2022-01-16T12:00:00-05:00"
+    time:
+      type: string
+      description: Time in 24h with hours, minutes, seconds
+      example: "18:00:00"
+    dayofweek:
+      type: string
+      description: Day of the week capitalized english
+      enum:
+        - Sunday
+        - Monday
+        - Tuesday
+        - Wednesday
+        - Thursday
+        - Friday
+        - Saturday
+    regex:
+      type: string
+      description: Standard regular expression
+      example: "^[A-Z]{3}[0-9]{2}[6-9]$"
+    rule:
+      type: object
+      description: Rule object descriptor
+      required:
+        - since
+        - until
+        - hollidays
+        - label
+        - legend
+      properties:
+        since:
+          description: Date since this rule applies
+          $ref: "#/components/schemas/datetime"
+          nullable: false
+        until:
+          description: Date until this rule applies
+          $ref: "#/components/schemas/datetime"
+          nullable: false
+        hollidays:
+          description: If this rule is applies on hollidays
+          type: boolean
+          nullable: false
+        label:
+          description: Restriction label
+          type: string
+          nullable: false
+        legend:
+          description: Rule legend
+          type: string
+          nullable: false
+        dayOfWeek:
+          description: Days in which this rule is applies
+          $ref: "#/components/schemas/dayofweek"
+          nullable: true
+        startsAt:
+          description: Time of the day in which this rule start to apply
+          $ref: "#/components/schemas/time"
+          nullable: true
+        endsAt:
+          description: Time of the day in which this rule ends to apply
+          $ref: "#/components/schemas/time"
+          nullable: true
+        plateRegex:
+          description: Licence plates for which this rule is applies
+          $ref: "#/components/schemas/regex"
+          nullable: true
+        serviceKind:
+          description: Vehicle service kind for which this rule is applies
+          type: string
+          nullable: true
+        fuelType:
+          description: Vehicle fuel type for which this rule is applies
+          type: string
+          nullable: true
+    restrictions:
+      type: object
+      description: Base response object for restrictions
+      required:
+        - timeZone
+        - updated
+        - rules
+      properties:
+        timeZone:
+          description: Time zone for this restrictions
+          $ref: "#/components/schemas/tz"
+          nullable: false
+        updated:
+          description: Last update for this restrictions
+          $ref: "#/components/schemas/datetime"
+          nullable: false
+        rules:
+          description: The rules
+          type: array
+          items:
+            $ref: "#/components/schemas/rule"
+          nullable: false
