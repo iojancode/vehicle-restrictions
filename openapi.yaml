@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   title: vehicle-restrictions
-  version: "0.2"
+  version: "0.3"
 paths:
   /{city_code}.json:
     get:
@@ -87,10 +87,6 @@ components:
           description: Date until this rule applies
           $ref: "#/components/schemas/datetime"
           nullable: false
-        hollidays:
-          description: If this rule applies on holidays
-          type: boolean
-          nullable: false
         label:
           description: Restriction label
           type: string
@@ -99,6 +95,10 @@ components:
           description: Rule legend
           type: string
           nullable: false
+        holliday:
+          description: Whether this rule applies only on a holiday or excludes it
+          type: boolean
+          nullable: true
         daysOfMonth:
           description: Days of the month for which this rule applies
           type: array
