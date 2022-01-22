@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   title: vehicle-restrictions
-  version: "0.1"
+  version: "0.2"
 paths:
   /{city_code}.json:
     get:
@@ -48,6 +48,11 @@ components:
       type: string
       description: Time using a 24-hour clock, minutes and seconds
       example: "18:00:00"
+    dayofmonth:
+      type: integer
+      minimum: 1
+      maximum: 31   
+      description: Day of the month from 1 to 31
     dayofweek:
       type: string
       description: Day of the week in English
@@ -93,9 +98,17 @@ components:
           description: Rule legend
           type: string
           nullable: false
-        dayOfWeek:
-          description: Days on which this rule applies
-          $ref: "#/components/schemas/dayofweek"
+        daysOfMonth:
+          description: Days of the month for which this rule applies
+          type: array
+          items:
+            $ref: "#/components/schemas/dayofmonth"
+          nullable: true
+        daysOfWeek:
+          description: Weekdays for which this rule applies
+          type: array
+          items:
+            $ref: "#/components/schemas/dayofweek"
           nullable: true
         startsAt:
           description: Time of day when this rule starts to apply
