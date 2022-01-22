@@ -26,6 +26,7 @@ paths:
           pattern: '[a-z]{2}\-[a-z]{3}\-[a-z]{3,}'
         name: city_code
         example: "co-ant-medellin"
+        description: Prefix according to ISO 3166-2 followed with city name
 servers:
   - url: https://raw.githubusercontent.com/iojancode/vehicle-restrictions/{branch}
     variables:
