@@ -1,4 +1,4 @@
-# vehicle-restrictions
+# vehicle-restrictions / pico y placa
 
 There's no suitable vehicle restrictions API that works for me, which is called "pico y placa" in my country, that's why this repo is built 
 
