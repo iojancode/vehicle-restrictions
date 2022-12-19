@@ -1,10 +1,10 @@
 {
     "timeZone": "America/Bogota",
-    "updated": "2022-01-22T12:00:00-05:00",
+    "updated": "2022-12-18T22:00:00-05:00",
     "rules": [
         {
             "since": "2022-01-10T00:00:00-05:00",
-            "until": "2022-06-30T23:59:59-05:00",
+            "until": "2023-01-30T23:59:59-05:00",
             "label": "Pico y placa Bogotá",
             "legend": "Placas impares",
             "holliday": false,
@@ -18,7 +18,7 @@
         },
         {
             "since": "2022-01-10T00:00:00-05:00",
-            "until": "2022-06-30T23:59:59-05:00",
+            "until": "2023-01-30T23:59:59-05:00",
             "label": "Pico y placa Bogotá",
             "legend": "Placas pares",
             "holliday": false,
