@@ -7,7 +7,6 @@ Feel free to use the raw service from your app:
 | Restriction | Url |
 | -------- | --------|
 | Pico y placa Medellín | `https://raw.githubusercontent.com/iojancode/vehicle-restrictions/master/co-ant-medellin.json` |
-| Pico y placa Bogotá | `https://raw.githubusercontent.com/iojancode/vehicle-restrictions/master/co-dc-bogota.json` |
 
 You can create proxies with `openapi.yaml` spec
 
