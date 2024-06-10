@@ -1,7 +1,8 @@
 openapi: 3.0.3
 info:
   title: vehicle-restrictions
-  version: "0.3"
+  version: "0.4"
+
 paths:
   /{city_code}.json:
     get:
@@ -27,6 +28,7 @@ paths:
         name: city_code
         example: "co-ant-medellin"
         description: Prefix according to ISO 3166-2 followed with city name
+
 servers:
   - url: https://raw.githubusercontent.com/iojancode/vehicle-restrictions/{branch}
     variables:
@@ -35,6 +37,7 @@ servers:
         enum:
           - master
           - test
+
 components:
   schemas:
     tz:
@@ -127,10 +130,14 @@ components:
           description: Vehicle service kind for which this rule applies
           type: string
           nullable: true
+          enum:
+            - Particular         
         fuelType:
           description: Vehicle fuel type for which this rule applies
           type: string
           nullable: true
+          enum:
+            - GASOLINA         
     restrictions:
       type: object
       description: Base response object for restrictions
