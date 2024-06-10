@@ -1,10 +1,10 @@
 openapi: 3.0.3
 info:
   title: vehicle-restrictions
-  version: "0.4"
+  version: "0.5"
 
 paths:
-  /{city_code}.json:
+  /{year}/{city_code}.json:
     get:
       responses:
         "200":
@@ -24,19 +24,54 @@ paths:
         required: true
         schema:
           type: string
-          pattern: '[a-z]{2}\-[a-z]{2,3}\-[a-z]{3,}'
+          pattern: '^20[0-9]{2}$'
+        name: year
+        example: "2024"
+        description: Restriction year
+      - in: path
+        required: true
+        schema:
+          type: string
+          pattern: '^[a-z]{2}\-[a-z]{2,3}\-[a-z]{3,}$'
         name: city_code
         example: "co-ant-medellin"
-        description: Prefix according to ISO 3166-2 followed with city name
+        description: Country prefix (ISO 3166-2), followed by region and city name
+
+  /{year}/{country_code}-hollidays.json:
+    get:
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/hollidays"
+        "404":
+          description: Not found
+          content:
+            text/plain:
+              schema:
+                type: string
+    parameters:
+      - in: path
+        required: true
+        schema:
+          type: string
+          pattern: '^20[0-9]{2}$'
+        name: year
+        example: "2024"
+        description: Holliday year
+      - in: path
+        required: true
+        schema:
+          type: string
+          pattern: '^[a-z]{2}$'
+        name: country_code
+        example: "co"
+        description: Country prefix (ISO 3166-2)      
 
 servers:
-  - url: https://raw.githubusercontent.com/iojancode/vehicle-restrictions/{branch}
-    variables:
-      branch:
-        default: master
-        enum:
-          - master
-          - test
+  - url: https://raw.githubusercontent.com/iojancode/vehicle-restrictions/master
 
 components:
   schemas:
@@ -44,19 +79,23 @@ components:
       type: string
       description: Time zone for restrictions from 'tz database'
       example: "America/Bogota"
+
     datetime:
       type: string
       description: Date and time with time zone
       example: "2022-01-16T12:00:00-05:00"
+
     time:
       type: string
       description: Time using a 24-hour clock, minutes and seconds
       example: "18:00:00"
+
     dayofmonth:
       type: integer
       minimum: 1
       maximum: 31   
       description: Day of the month from 1 to 31
+
     dayofweek:
       type: string
       description: Day of the week in English
@@ -68,10 +107,12 @@ components:
         - Thursday
         - Friday
         - Saturday
+
     regex:
       type: string
       description: Standard regular expression
       example: "^[A-Z]{3}[0-9]{2}[6-9]$"
+
     rule:
       type: object
       description: Rule object descriptor
@@ -137,7 +178,8 @@ components:
           type: string
           nullable: true
           enum:
-            - GASOLINA         
+            - GASOLINA   
+
     restrictions:
       type: object
       description: Base response object for restrictions
@@ -160,3 +202,46 @@ components:
           items:
             $ref: "#/components/schemas/rule"
           nullable: false
+
+    event:
+      type: object
+      description: Event object descriptor
+      required:
+        - since
+        - until
+      properties:
+        since:
+          description: Date since this event applies
+          $ref: "#/components/schemas/datetime"
+          nullable: false
+        until:
+          description: Date until this event applies
+          $ref: "#/components/schemas/datetime"
+          nullable: false
+        label:
+          description: Event label
+          type: string
+          nullable: true  
+
+    hollidays:
+      type: object
+      description: Base response object for holliday
+      required:
+        - timeZone
+        - updated
+        - events
+      properties:
+        timeZone:
+          description: Time zone for this hollidays
+          $ref: "#/components/schemas/tz"
+          nullable: false
+        updated:
+          description: Last update for this hollidays
+          $ref: "#/components/schemas/datetime"
+          nullable: false
+        events:
+          description: The holliday events
+          type: array
+          items:
+            $ref: "#/components/schemas/event"
+          nullable: false          
