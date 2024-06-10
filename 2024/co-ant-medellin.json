@@ -7,7 +7,7 @@
             "until": "2024-07-05T23:59:59-05:00",
             "label": "Pico y placa Medellín",
             "legend": "Lunes 5-8",
-            "holliday": false,
+            "holiday": false,
             "daysOfMonth": null,
             "daysOfWeek": [
                 "Monday"
@@ -23,7 +23,7 @@
             "until": "2024-07-05T23:59:59-05:00",
             "label": "Pico y placa Medellín",
             "legend": "Martes 1-4",
-            "holliday": false,
+            "holiday": false,
             "daysOfMonth": null,
             "daysOfWeek": [
                 "Tuesday"
@@ -39,7 +39,7 @@
             "until": "2024-07-05T23:59:59-05:00",
             "label": "Pico y placa Medellín",
             "legend": "Miércoles 2-0",
-            "holliday": false,
+            "holiday": false,
             "daysOfMonth": null,
             "daysOfWeek": [
                 "Wednesday"
@@ -55,7 +55,7 @@
             "until": "2024-07-05T23:59:59-05:00",
             "label": "Pico y placa Medellín",
             "legend": "Jueves 3-6",
-            "holliday": false,
+            "holiday": false,
             "daysOfMonth": null,
             "daysOfWeek": [
                 "Thursday"
@@ -71,7 +71,7 @@
             "until": "2024-07-05T23:59:59-05:00",
             "label": "Pico y placa Medellín",
             "legend": "Viernes 7-9",
-            "holliday": false,
+            "holiday": false,
             "daysOfMonth": null,
             "daysOfWeek": [
                 "Friday"
