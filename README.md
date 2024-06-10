@@ -1,12 +1,16 @@
-# Vehicle restrictions API / API pico y placa
+# Vehicle restrictions API
 
-There's no suitable vehicle restrictions API that works for me, which is called "pico y placa" in my country, that's why this repo is built 
+There's no suitable vehicle restrictions API that works for me, which is called "pico y placa" in my country, that's why this repo is built
 
 Feel free to use the raw service from your app:
 
-| Restriction | Url |
-| -------- | --------|
-| Pico y placa Medellín | `https://raw.githubusercontent.com/iojancode/vehicle-restrictions/master/co-ant-medellin.json` |
+| Year | Restriction | Url |
+| -- | -------- | --------|
+| 2024 | Medellín Restrictions | `https://raw.githubusercontent.com/iojancode/vehicle-restrictions/master/2024/co-ant-medellin.json` |
+
+| Year | Hollidays | Url |
+| -- | -------- | --------|
+| 2024 | Colombia Hollidays | `https://raw.githubusercontent.com/iojancode/vehicle-restrictions/master/2024/co-hollidays.json` |
 
 You can create proxies with `openapi.yaml` spec
 
