@@ -28,11 +28,6 @@
             "label": "Viernes Santo"
         },
         {
-            "since": "2024-03-31T00:00:00-05:00",
-            "until": "2024-03-31T23:59:59-05:00",
-            "label": "Domingo de resurrección"
-        },
-        {
             "since": "2024-05-01T00:00:00-05:00",
             "until": "2024-05-01T23:59:59-05:00",
             "label": "Día del Trabajo"
@@ -85,7 +80,7 @@
         {
             "since": "2024-11-11T00:00:00-05:00",
             "until": "2024-11-11T23:59:59-05:00",
-            "label": "Día de la Independencia de Cartagena"
+            "label": "Independencia de Cartagena"
         },
         {
             "since": "2024-12-08T00:00:00-05:00",
