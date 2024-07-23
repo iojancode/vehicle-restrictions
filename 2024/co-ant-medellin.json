@@ -4,7 +4,7 @@
     "rules": [
         {
             "since": "2024-02-05T00:00:00-05:00",
-            "until": "2024-07-05T23:59:59-05:00",
+            "until": "2024-07-31T23:59:59-05:00",
             "label": "Pico y placa Medellín",
             "legend": "Lunes 5-8",
             "holliday": false,
@@ -20,7 +20,7 @@
         },
         {
             "since": "2024-02-05T00:00:00-05:00",
-            "until": "2024-07-05T23:59:59-05:00",
+            "until": "2024-07-31T23:59:59-05:00",
             "label": "Pico y placa Medellín",
             "legend": "Martes 1-4",
             "holliday": false,
@@ -36,7 +36,7 @@
         },
         {
             "since": "2024-02-05T00:00:00-05:00",
-            "until": "2024-07-05T23:59:59-05:00",
+            "until": "2024-07-31T23:59:59-05:00",
             "label": "Pico y placa Medellín",
             "legend": "Miércoles 2-0",
             "holliday": false,
@@ -52,7 +52,7 @@
         },
         {
             "since": "2024-02-05T00:00:00-05:00",
-            "until": "2024-07-05T23:59:59-05:00",
+            "until": "2024-07-31T23:59:59-05:00",
             "label": "Pico y placa Medellín",
             "legend": "Jueves 3-6",
             "holliday": false,
@@ -68,7 +68,7 @@
         },
         {
             "since": "2024-02-05T00:00:00-05:00",
-            "until": "2024-07-05T23:59:59-05:00",
+            "until": "2024-07-31T23:59:59-05:00",
             "label": "Pico y placa Medellín",
             "legend": "Viernes 7-9",
             "holliday": false,
