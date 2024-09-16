@@ -1,0 +1,86 @@
+{
+    "timeZone": "America/Bogota",
+    "updated": "2024-06-10T18:00:00-05:00",
+    "rules": [        
+        {
+            "since": "2024-06-01T00:00:00-05:00",
+            "until": "2024-12-31T23:59:59-05:00",
+            "label": "Pico y placa Armenia",
+            "legend": "Lunes 5-6",
+            "holliday": false,
+            "daysOfMonth": null,
+            "daysOfWeek": [
+                "Monday"
+            ],
+            "startsAt": "06:00:00",
+            "endsAt": "19:00:00",
+            "plateRegex": "(^[A-Z]{3}[0-9]{2}[56]$)|(^[A-Z]{3}[0-9][56][A-Z]?$)",
+            "serviceKind": "Particular",
+            "fuelType": "GASOLINA"
+        },
+        {
+            "since": "2024-06-01T00:00:00-05:00",
+            "until": "2024-12-31T23:59:59-05:00",
+            "label": "Pico y placa Armenia",
+            "legend": "Martes 7-8",
+            "holliday": false,
+            "daysOfMonth": null,
+            "daysOfWeek": [
+                "Tuesday"
+            ],
+            "startsAt": "06:00:00",
+            "endsAt": "19:00:00",
+            "plateRegex": "(^[A-Z]{3}[0-9]{2}[78]$)|(^[A-Z]{3}[0-9][78][A-Z]?$)",
+            "serviceKind": "Particular",
+            "fuelType": "GASOLINA"
+        },
+        {
+            "since": "2024-06-01T00:00:00-05:00",
+            "until": "2024-12-31T23:59:59-05:00",
+            "label": "Pico y placa Armenia",
+            "legend": "Miércoles 9-0",
+            "holliday": false,
+            "daysOfMonth": null,
+            "daysOfWeek": [
+                "Wednesday"
+            ],
+            "startsAt": "06:00:00",
+            "endsAt": "19:00:00",
+            "plateRegex": "(^[A-Z]{3}[0-9]{2}[90]$)|(^[A-Z]{3}[0-9][90][A-Z]?$)",
+            "serviceKind": "Particular",
+            "fuelType": "GASOLINA"
+        },
+        {
+            "since": "2024-06-01T00:00:00-05:00",
+            "until": "2024-12-31T23:59:59-05:00",
+            "label": "Pico y placa Armenia",
+            "legend": "Jueves 1-2",
+            "holliday": false,
+            "daysOfMonth": null,
+            "daysOfWeek": [
+                "Thursday"
+            ],
+            "startsAt": "06:00:00",
+            "endsAt": "19:00:00",
+            "plateRegex": "(^[A-Z]{3}[0-9]{2}[12]$)|(^[A-Z]{3}[0-9][12][A-Z]?$)",
+            "serviceKind": "Particular",
+            "fuelType": "GASOLINA"
+        },
+        {
+            "since": "2024-06-01T00:00:00-05:00",
+            "until": "2024-12-31T23:59:59-05:00",
+            "label": "Pico y placa Armenia",
+            "legend": "Viernes 3-4",
+            "holliday": false,
+            "daysOfMonth": null,
+            "daysOfWeek": [
+                "Friday"
+            ],
+            "startsAt": "06:00:00",
+            "endsAt": "19:00:00",
+            "plateRegex": "(^[A-Z]{3}[0-9]{2}[34]$)|(^[A-Z]{3}[0-9][34][A-Z]?$)",
+            "serviceKind": "Particular",
+            "fuelType": "GASOLINA"
+        }
+    ]
+}
