@@ -1,0 +1,86 @@
+{
+    "timeZone": "America/Bogota",
+    "updated": "2026-01-17T12:00:00-05:00",
+    "rules": [
+        {
+            "since": "2026-01-19T00:00:00-05:00",
+            "until": "2026-08-01T23:59:59-05:00",
+            "label": "Pico y placa Medellín",
+            "legend": "Lunes 6-9",
+            "holliday": false,
+            "daysOfMonth": null,
+            "daysOfWeek": [
+                "Monday"
+            ],
+            "startsAt": "04:00:00",
+            "endsAt": "20:00:00",
+            "plateRegex": "(^[A-Z]{3}[0-9]{2}[69]$)|(^[A-Z]{3}[69][0-9][A-Z]?$)",
+            "serviceKind": "Particular",
+            "fuelType": "GASOLINA"
+        },
+        {
+            "since": "2026-01-19T00:00:00-05:00",
+            "until": "2026-08-01T23:59:59-05:00",
+            "label": "Pico y placa Medellín",
+            "legend": "Martes 5-7",
+            "holliday": false,
+            "daysOfMonth": null,
+            "daysOfWeek": [
+                "Tuesday"
+            ],
+            "startsAt": "04:00:00",
+            "endsAt": "20:00:00",
+            "plateRegex": "(^[A-Z]{3}[0-9]{2}[57]$)|(^[A-Z]{3}[57][0-9][A-Z]?$)",
+            "serviceKind": "Particular",
+            "fuelType": "GASOLINA"
+        },
+        {
+            "since": "2026-01-19T00:00:00-05:00",
+            "until": "2026-08-01T23:59:59-05:00",
+            "label": "Pico y placa Medellín",
+            "legend": "Miércoles 1-8",
+            "holliday": false,
+            "daysOfMonth": null,
+            "daysOfWeek": [
+                "Wednesday"
+            ],
+            "startsAt": "04:00:00",
+            "endsAt": "20:00:00",
+            "plateRegex": "(^[A-Z]{3}[0-9]{2}[18]$)|(^[A-Z]{3}[18][0-9][A-Z]?$)",
+            "serviceKind": "Particular",
+            "fuelType": "GASOLINA"
+        },
+        {
+            "since": "2026-01-19T00:00:00-05:00",
+            "until": "2026-08-01T23:59:59-05:00",
+            "label": "Pico y placa Medellín",
+            "legend": "Jueves 0-2",
+            "holliday": false,
+            "daysOfMonth": null,
+            "daysOfWeek": [
+                "Thursday"
+            ],
+            "startsAt": "04:00:00",
+            "endsAt": "20:00:00",
+            "plateRegex": "(^[A-Z]{3}[0-9]{2}[02]$)|(^[A-Z]{3}[02][0-9][A-Z]?$)",
+            "serviceKind": "Particular",
+            "fuelType": "GASOLINA"
+        },
+        {
+            "since": "2026-01-19T00:00:00-05:00",
+            "until": "2026-08-01T23:59:59-05:00",
+            "label": "Pico y placa Medellín",
+            "legend": "Viernes 3-4",
+            "holliday": false,
+            "daysOfMonth": null,
+            "daysOfWeek": [
+                "Friday"
+            ],
+            "startsAt": "04:00:00",
+            "endsAt": "20:00:00",
+            "plateRegex": "(^[A-Z]{3}[0-9]{2}[34]$)|(^[A-Z]{3}[34][0-9][A-Z]?$)",
+            "serviceKind": "Particular",
+            "fuelType": "GASOLINA"
+        }
+    ]
+}
